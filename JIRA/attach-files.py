@@ -27,6 +27,7 @@ response = requests.post(url = url,
                          headers = headers,
                          files = files
                          )
-print(response.json())
+filename = response.json()[0]['filename']
+print(f'{filename} is successfully attached to {issue_key}')
 
 
